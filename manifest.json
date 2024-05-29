@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Bluesky Feed Context Inserter",
+  "version": "1.0",
+
+  "description": "Inserts a <p> tag with the value of the 'data-feed-context' property inside <div> elements on main.bsky.dev.",
+
+  "permissions": [
+    "webNavigation"
+  ],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://main.bsky.dev/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
