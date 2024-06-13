@@ -16,7 +16,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://main.bsky.dev/*"],
+      "matches": ["*://main.bsky.dev/*", "*://bsky.app/*"],
       "js": ["content.js"]
     }
   ]
